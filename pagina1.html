@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>CompilaCafé  Cardápio Dev</title>
+</head>
+
+    <link rel="stylesheet" href="/style.css">
+
+
+<body>
+  <h1> CompilaCafé — Cardápio Dev Edition 💻</h1>
+
+  <h2>Cafés</h2>
+  <ul>
+    <li>Java Express — R$6,00 
+      <button onclick="adicionarAoPedido('Java Express', 6)">Adicionar</button>
+    </li>
+    <li>Latte Loop — R$8,00 
+      <button onclick="adicionarAoPedido('Latte Loop', 8)">Adicionar</button>
+    </li>
+    <li>Debug Mocha — R$9,50 
+      <button onclick="adicionarAoPedido('Debug Mocha', 9.5)">Adicionar</button>
+    </li>
+    <li>404 Café Not Found — R$7,00 
+      <button onclick="adicionarAoPedido('404 Café Not Found', 7)">Adicionar</button>
+    </li>
+    <li>Cappuccino Compile — R$8,50 
+      <button onclick="adicionarAoPedido('Cappuccino Compile', 8.5)">Adicionar</button>
+    </li>
+  </ul>
+
+  <h2>Snacks</h2>
+  <ul>
+    <li>Cookie Overflow — R$5,00 
+      <button onclick="adicionarAoPedido('Cookie Overflow', 5)">Adicionar</button>
+    </li>
+    <li>Array de Pães de Queijo — R$10,00 
+      <button onclick="adicionarAoPedido('Array de Pães de Queijo', 10)">Adicionar</button>
+    </li>
+    <li>Bug Brownie — R$6,50 
+      <button onclick="adicionarAoPedido('Bug Brownie', 6.5)">Adicionar</button>
+    </li>
+  </ul>
+
+  <p>
+    <a href="pagina2.html"> Finalizar Pedido</a>
+  </p>
+
+  <script>
+    function adicionarAoPedido(nome, preco) {
+      const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+      const itemExistente = carrinho.find((item) => item.nome === nome);
+
+      if (itemExistente) {
+        itemExistente.quantidade++;
+      } else {
+        carrinho.push({ nome, preco, quantidade: 1 });
+      }
+
+      localStorage.setItem("carrinho", JSON.stringify(carrinho));
+      alert(`${nome} foi adicionado ao pedido!`);
+    }
+  </script>
+</body>
+</html>
