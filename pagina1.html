@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+          crossorigin="anonymous">
 
-     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style.css">
 
-    <title>Document</title>
-    
+    <title>CompilaCafé — Cardápio</title>
 </head>
 <body>
 
-     <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" 
+            aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -27,61 +32,72 @@
         <li class="nav-item">
           <a class="nav-link" href="pagina1.html">pagina1</a>
         </li>
-       
         <li class="nav-item">
           <a class="nav-link" href="pagina2.html">pagina2</a>
         </li>
-       
-        
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-       
       </ul>
-      
     </div>
   </div>
 </nav>
 
-<h1> CompilaCafé — Cardápio Dev Edition </h1>
+<h1>CompilaCafé — Cardápio Dev Edition</h1>
 
+<div class="container mt-4">
   <h2>Cafés</h2>
-  <ul>
-    <li>Java Express — R$6,00 
-      <button onclick="adicionarAoPedido('Java Express', 6)">Adicionar</button>
+  <ul class="list-group mb-4">
+    <li class="list-group-item">Java Express — R$6,00 
+      <button class="btn btn-sm btn-primary float-end" onclick="adicionarAoPedido('Java Express', 6)">Adicionar</button>
     </li>
-    <li>Latte Loop — R$8,00 
-      <button onclick="adicionarAoPedido('Latte Loop', 8)">Adicionar</button>
+    <li class="list-group-item">Latte Loop — R$8,00 
+      <button class="btn btn-sm btn-primary float-end" onclick="adicionarAoPedido('Latte Loop', 8)">Adicionar</button>
     </li>
-    <li>Debug Mocha — R$9,50 
-      <button onclick="adicionarAoPedido('Debug Mocha', 9.5)">Adicionar</button>
+    <li class="list-group-item">Debug Mocha — R$9,50 
+      <button class="btn btn-sm btn-primary float-end" onclick="adicionarAoPedido('Debug Mocha', 9.5)">Adicionar</button>
     </li>
-    <li>404 Café Not Found — R$7,00 
-      <button onclick="adicionarAoPedido('404 Café Not Found', 7)">Adicionar</button>
+    <li class="list-group-item">404 Café Not Found — R$7,00 
+      <button class="btn btn-sm btn-primary float-end" onclick="adicionarAoPedido('404 Café Not Found', 7)">Adicionar</button>
     </li>
-    <li>Cappuccino Compile — R$8,50 
-      <button onclick="adicionarAoPedido('Cappuccino Compile', 8.5)">Adicionar</button>
+    <li class="list-group-item">Cappuccino Compile — R$8,50 
+      <button class="btn btn-sm btn-primary float-end" onclick="adicionarAoPedido('Cappuccino Compile', 8.5)">Adicionar</button>
     </li>
   </ul>
 
   <h2>Snacks</h2>
-  <ul>
-    <li>Cookie Overflow — R$5,00 
-      <button onclick="adicionarAoPedido('Cookie Overflow', 5)">Adicionar</button>
+  <ul class="list-group">
+    <li class="list-group-item">Cookie Overflow — R$5,00 
+      <button class="btn btn-sm btn-primary float-end" onclick="adicionarAoPedido('Cookie Overflow', 5)">Adicionar</button>
     </li>
-    <li>Array de Pães de Queijo — R$10,00 
-      <button onclick="adicionarAoPedido('Array de Pães de Queijo', 10)">Adicionar</button>
+    <li class="list-group-item">Array de Pães de Queijo — R$10,00 
+      <button class="btn btn-sm btn-primary float-end" onclick="adicionarAoPedido('Array de Pães de Queijo', 10)">Adicionar</button>
     </li>
-    <li>Bug Brownie — R$6,50 
-      <button onclick="adicionarAoPedido('Bug Brownie', 6.5)">Adicionar</button>
+    <li class="list-group-item">Bug Brownie — R$6,50 
+      <button class="btn btn-sm btn-primary float-end" onclick="adicionarAoPedido('Bug Brownie', 6.5)">Adicionar</button>
     </li>
   </ul>
-   
-  
-    
+
+  <div class="mt-4">
+    <a href="pagina2.html" class="btn btn-success">Ver Pedido</a>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; Davi Rodrigues do Santos Cariolano 2025.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+<!-- JAVASCRIPT -->
+<script>
+  // Adiciona item ao pedido
+  function adicionarAoPedido(nome, preco) {
+    let pedido = JSON.parse(localStorage.getItem('pedido')) || [];
+    pedido.push({ nome, preco });
+    localStorage.setItem('pedido', JSON.stringify(pedido));
+    alert(nome + ' adicionado ao pedido!');
+  }
+</script>
+
 </body>
 </html>
